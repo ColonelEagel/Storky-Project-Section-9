@@ -26,7 +26,7 @@ function SelectedProject({ project,
                 <p className="my-4 text-red-500"><span className=" uppercase bold">Warning: </span>This action cannot be undone.</p>
                 <menu className="flex justify-end items-center gap-4 my-4">
                     <li><Button onClick={ () => deleteModal.current.close() } className='px-6 py-2 rounded-md  text-stone-200 bg-stone-600 hover:bg-slate-700'>No</Button></li>
-                    <li><Button onClick={ () => handleConfirm(project.id) } className='px-6 py-2 rounded-md  text-stone-200 bg-red-500 hover:bg-red-700'>Yes</Button></li>
+                    <li><Button onClick={ () => handleConfirm(project?.id) } className='px-6 py-2 rounded-md  text-stone-200 bg-red-500 hover:bg-red-700'>Yes</Button></li>
                 </menu>
             </Modal>
             <div className="w-[60%] mx-auto mt-16">

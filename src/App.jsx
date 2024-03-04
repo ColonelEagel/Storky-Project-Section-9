@@ -79,7 +79,7 @@ function App() {
     onDelete={ handleDeleteProject }
     onAddTask={ handleAddTask }
     onDeleteTask={ handleDeleteTask }
-    tasks={ projectsState.tasks } />
+    tasks={ projectsState?.tasks } />
 
 
   if (projectsState.selectedProjectId === null) {
