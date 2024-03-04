@@ -66,12 +66,12 @@ function App() {
       return {
         ...prevState,
         selectedProjectId: undefined,
-        projects: prevState.projects.filter((project) => project.id !== projectId),
+        projects: prevState?.projects?.filter((project) => project.id !== projectId),
       };
     });
   }
 
-  const selectedProject = projectsState.projects.find((project) => {
+  const selectedProject = projectsState?.projects?.find((project) => {
     return project.id === projectsState.selectedProjectId;
   });
 
