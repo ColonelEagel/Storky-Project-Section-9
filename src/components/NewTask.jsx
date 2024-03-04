@@ -8,7 +8,7 @@ export default function NewTask({ onAdd }) {
     }
 
     function handleClick() {
-        if (enteredTask.trim().length === 0) {
+        if (enteredTask?.trim().length === 0) {
             return;
         }
         onAdd(enteredTask);

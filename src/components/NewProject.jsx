@@ -11,9 +11,9 @@ export default function NewProject({ onAdd,onCancel }) {
     const modal = useRef(null)
     const cancelModal = useRef(null)
     const handleSave = () => {
-        const enteredTitle = title.current.value;
-        const enteredDescription = description.current.value;
-        const enteredDueDate = dueDate.current.value;
+        const enteredTitle = title?.current.value;
+        const enteredDescription = description?.current.value;
+        const enteredDueDate = dueDate?.current.value;
         //validation
         if (enteredTitle.trim().length === 0 || enteredDescription.trim().length === 0 || enteredDueDate.trim().length === 0) {
             modal.current.open();

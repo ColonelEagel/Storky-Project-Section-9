@@ -38,7 +38,7 @@ function App() {
       return {
         ...prevState,
         selectedProjectId: ProjectId,
-        projects: [...prevState?.projects,newProject],
+        projects: [...prevState.projects,newProject],
       };
     });
   }
@@ -117,7 +117,7 @@ function App() {
     <main className=" h-screen my-8 flex gap-8">
       <ProjectsSidebar
         onStartAddProject={ HandleStartAddProject }
-        projects={ projectsState.projects }
+        projects={ projectsState?.projects }
         onSelectProject={ handleSelectProject }
         selectedProjectId={ projectsState.selectedProjectId }
         onAddTask={ handleAddTask }
