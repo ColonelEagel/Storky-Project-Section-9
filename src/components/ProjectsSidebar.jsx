@@ -29,9 +29,9 @@ function ProjectsSidebar({ onStartAddProject,projects,onSelectProject,selectedPr
                             cssClasses += " text-stone-400"
                         }
                         return (
-                            <li key={ project?.id }>
+                            <li key={ project.id }>
                                 <button className={ cssClasses } onClick={ () => onSelectProject(project.id) }>
-                                    { project?.title }
+                                    { project.title }
                                 </button>
                             </li>
                         )

@@ -35,7 +35,8 @@ function App() {
 
   function handleAddProject(project) {
     setProjectsState((prevState) => {
-      const ProjectId = uuidv4
+      const ProjectId = uuidv4()
+      console.log(ProjectId);
       const newProject = { ...project,id: ProjectId };
       return {
         ...prevState,
