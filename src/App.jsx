@@ -3,11 +3,13 @@ import NewProject from "./components/NewProject";
 import NoProjectSelected from "./components/NoProjectSelected";
 import ProjectsSidebar from "./components/ProjectsSidebar";
 import SelectedProject from "./components/SelectedProject";
+import { v4 as uuidv4 } from 'uuid';
+
 
 function App() {
 
-  const storedProjectsState = JSON.parse(localStorage.getItem("projectsState"));
-  const [projectsState,setProjectsState] = useState({ ...storedProjectsState } || {
+  const storedProjectsState = JSON.parse(localStorage.getItem("projectsState")) || null;
+  const [projectsState,setProjectsState] = useState(storedProjectsState || {
     selectedProjectId: undefined,
     projects: [],
     tasks: [],
@@ -33,7 +35,7 @@ function App() {
 
   function handleAddProject(project) {
     setProjectsState((prevState) => {
-      const ProjectId = Math.random()
+      const ProjectId = uuidv4
       const newProject = { ...project,id: ProjectId };
       return {
         ...prevState,
